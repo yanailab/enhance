@@ -56,7 +56,7 @@ def enhance(
     if k is None:
         k = int(ceil(target_transcript_count / transcript_count))
 
-        k_max = int(max_neighbor_frac * X.shape[1])
+        k_max = int(max_neighbor_frac * X.shape[0])
         if k <= k_max:
             _LOGGER.info(
                 'Will perform denoising with k=%d '
