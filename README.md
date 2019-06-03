@@ -1,4 +1,4 @@
-<div style="text-align:center"><img style="width:75%; height: auto" src="https://github.com/yanailab/moana/raw/images/splash.jpg"/></div>
+<div style="text-align:center"><img style="width:60%; height: auto" src="https://github.com/yanailab/moana/raw/master/images/splash.jpg"/></div>
 
 ## ENHANCE: Accurate denoising of single-cell RNA-Seq data
 
