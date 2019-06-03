@@ -4,4 +4,4 @@
 
 This repository contains a Python implementation of the ENHANCE algorithm for denoising single-cell RNA-Seq data ([Wagner et al., 2019](https://www.biorxiv.org/content/10.1101/655365v1)).
 
-More documentation and an R documentation will be published shortly!
+More documentation and an R implementation will be published shortly!
