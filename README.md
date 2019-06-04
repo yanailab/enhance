@@ -88,38 +88,20 @@ Follow these instructions to run the Python implementation of ENHANCE from the c
 
   Output:
   ```
-	Loading the data... done. (Took 0.1 s.)
-	The expression matrix contains 7145 genes and 100 cells.
-
-	Performing kNN-smoothing with k=32, d=2, and dither=0.030...
-	Step 1/5: Smooth using k=2
-		PCA took 0.1 s.
-		The fraction of variance explained by the top 2 PCs is 4.6 %.
-		Calculating pair-wise distance matrix took 0.0 s.
-		Calculating the smoothed expression matrix took 0.0 s.
-	Step 2/5: Smooth using k=4
-		PCA took 0.0 s.
-		The fraction of variance explained by the top 2 PCs is 8.0 %.
-		Calculating pair-wise distance matrix took 0.0 s.
-		Calculating the smoothed expression matrix took 0.0 s.
-	Step 3/5: Smooth using k=8
-		PCA took 0.0 s.
-		The fraction of variance explained by the top 2 PCs is 14.3 %.
-		Calculating pair-wise distance matrix took 0.0 s.
-		Calculating the smoothed expression matrix took 0.0 s.
-	Step 4/5: Smooth using k=16
-		PCA took 0.0 s.
-		The fraction of variance explained by the top 2 PCs is 25.4 %.
-		Calculating pair-wise distance matrix took 0.0 s.
-		Calculating the smoothed expression matrix took 0.0 s.
-	Step 5/5: Smooth using k=32
-		PCA took 0.0 s.
-		The fraction of variance explained by the top 2 PCs is 52.4 %.
-		Calculating pair-wise distance matrix took 0.0 s.
-		Calculating the smoothed expression matrix took 0.1 s.
-	kNN-smoothing finished in 0.3 s.
-
-	Writing results to "test_smoothing_smoothed.tsv"... done. (Took 0.5 s.)
+    [2019-06-04 18:51:16] INFO: Reading the expression matrix (6.4 MB) from "data/pbmc-4k_expression.tsv.gz"...
+    [2019-06-04 18:51:26] INFO: The expression matrix contains 14854 genes and 4334 cells.
+    [2019-06-04 18:51:26] INFO: Applying ENHANCE...
+    [2019-06-04 18:51:26] INFO: Input matrix hash: 199bcb6f4b2fbd7e254bafb272df07e6
+    [2019-06-04 18:51:26] INFO: The median transcript count of the matrix is 3478.5.
+    [2019-06-04 18:51:26] INFO: Will perform denoising with k=58 (value was determined automatically based on a target transcript count of 200000).
+    [2019-06-04 18:51:26] INFO: Determining the number of significant PCs...
+    [2019-06-04 18:51:32] INFO: The number of significant PCs is 16.
+    [2019-06-04 18:51:32] INFO: Aggregating cells...
+    [2019-06-04 18:51:49] INFO: Removing noise using PCA...
+    [2019-06-04 18:51:54] INFO: ENHANCE took 28.0 s.
+    [2019-06-04 18:51:55] INFO: Denoised matrix hash: 9517e97621e500e357d9ecea9a36bb63
+    [2019-06-04 18:51:55] INFO: Writing the denoised expression matrix to "denoised_pbmc-4k_expression.tsv"...
+    [2019-06-04 18:53:21] INFO: File size: 711.7 MB.
   ```
 
 The results are shown using UMAP below. (The UMAP result is included in this repository, under `data/umap_result.tsv`).
